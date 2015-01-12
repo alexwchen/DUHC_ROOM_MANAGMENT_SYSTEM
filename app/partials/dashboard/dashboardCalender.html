@@ -1,0 +1,36 @@
+<root>
+  <style>
+    .sec_title{
+      text-align:center;
+      border-bottom:1px solid gray;
+      padding-bottom:5px;
+    }
+  </style>
+
+  <div class="col-md-12">
+    <div class="col-md-3">
+      <h4 class="sec_title"> Move Out In 14 Days </h4>
+      <p ng-repeat="res in movedout_future">
+        {{res.title}} will moved out in {{res.days}} days
+      </p>
+    </div>
+
+    <div class="col-md-3">
+      <h4 class="sec_title"> Just Moved In the Last 14 Days </h4>
+      <p ng-repeat="res in movedout_past">
+        {{res.title}}  moved out {{res.days}} days ago
+      </p>
+    </div>
+
+
+    <div class="col-md-3">
+      <h4 class="sec_title"> Moved Out Unclear </h4>
+      <p ng-repeat="res in movedout_unclear">
+        {{res.title}} move out date not clear
+      </p>
+    </div>
+
+  </div>
+
+  <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+</root>

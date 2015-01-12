@@ -1,0 +1,16 @@
+<div class="container">
+<form class="form-horizontal">
+  <div class="form-group" ng-repeat="f in fields">
+    <label for="input{{f}}" class="control-label">{{f}}</label>
+    <div>
+      <input type="text" class="form-control" id="input{{f}}" placeholder="Please Enter Resident's {{f}}" ng-model="ResObj[f]">
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <button type="submit" class="btn btn-success col-lg-12" ng-click="updateResObj()">Update</button>
+      <button type="submit" class="btn btn-danger col-lg-12" ng-click="removeResObj()" style="margin-top:50px; width:200px; float:right">Remove</button>
+    </div>
+  </div>
+</form>
+</div>

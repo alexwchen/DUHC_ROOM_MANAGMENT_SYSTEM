@@ -1,0 +1,25 @@
+{
+  "name": "roomtracking",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/linker/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.8",
+    "bootstrap": "~3.3.1",
+    "firebase": "~2.1.0",
+    "angularfire": "~0.9.1",
+    "angular-ui": "~0.4.0",
+    "angular-ui-router": "~0.2.13",
+    "jquery": "~2.1.3",
+    "angular-ui-calendar": "latest",
+    "ui.bootstrap": "~0.12.0",
+    "angular-bootstrap": "~0.12.0"
+  }
+}

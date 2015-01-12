@@ -1,0 +1,36 @@
+<root>
+
+  <div class="col-lg-12">
+    <div class="input-group">
+      <input type="text" class="form-control" aria-label="..." ng-model="search.$" ng-show="show_search_bar('All')">
+      <span ng-repeat="f in fields">
+        <input type="text" class="form-control" aria-label="..." ng-model="search[f]" ng-show="show_search_bar(f)">
+      </span>
+
+
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Serach {{showSearchBar}} <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li style="cursor:pointer;" ng-click="change_search('Search All')"><a>Search All</a></li>
+          <li style="cursor:pointer;"ng-click="change_search(f)" ng-repeat="f in fields"><a>Search {{f}}</a></li>
+        </ul>
+      </div>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+
+  <div class="table-responsive" style="margin:15px;margin-top:60px;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="cursor:pointer;"  ng-repeat="f in fields" ng-click="sortTable(f)">{{f}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat = "r in residents | filter:search:strict | orderBy:sortAttr:reverse" ng-click="edit(r.$id)" style="cursor:pointer;">
+          <td ng-repeat="f in fields">{{r[f]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</root>
