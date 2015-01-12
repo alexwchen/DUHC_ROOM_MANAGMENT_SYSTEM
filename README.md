@@ -1,4 +1,4 @@
-TestLegends Payment Landing
+DUHC Room Management System
 ===================
 
 #### Demo:
@@ -25,4 +25,5 @@ Link: https://roomtracking.firebaseapp.com
 ```
 
 #### Sorce Mod:
+I changed this the calender won't sort by event length
 ![alt text](./readme/calender_source_mod.png "LOGO")
