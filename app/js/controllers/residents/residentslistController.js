@@ -30,6 +30,7 @@
       // only show the col res manager are interested in
       for(var j=0;j<resdata.length;j++){
         var empty = {};
+        empty.$id = resdata[j].$id;
         for(var i=0;i<$scope.fields.length;i++){
           var f = $scope.fields[i];
           empty[f] = resdata[j][f]
