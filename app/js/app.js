@@ -5,7 +5,7 @@
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('residents', {
-      url: '/',
+      url: '/residents:owner',
       templateUrl: '/app/partials/residents/residentsSkeleton.html'
     })
     .state('dashboard', {
@@ -20,9 +20,9 @@
       url: '/edit:objID',
       templateUrl: '/app/partials/residents/editSkeleton.html',
     });
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/residents");
   })
 
   .constant('FirebaseRoot', 'https://roomtracking.firebaseio.com/')
-  .constant('ResFields', ['Name','Room', 'Category', 'Email','Start Date','End Date','Waiver Recievd', 'Security Deposit', 'Notes', 'Paid Rooms', 'Paid Desk']);
+  .constant('ResFields', ['Name','Room', 'Category', 'Email','Start Date','End Date','Waiver Recievd', 'Security Deposit', 'Notes', 'Paid Rooms', 'Paid Desk', 'ID Card', 'Card Exp Date', 'Monthly Rent']);
 })();

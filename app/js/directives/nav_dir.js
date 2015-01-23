@@ -9,8 +9,14 @@
       restrict: 'E',
       templateUrl: 'app/partials/nav.html',
       replace: true,
-      scope:{}
-      // controller: 'userBooksController'
+      scope:{},
+      controller:function($scope,$state){
+
+        $scope.personalized_board = function(name){
+          $state.go("residents",{"owner":name});
+        }
+
+      }
     }
   });
 
